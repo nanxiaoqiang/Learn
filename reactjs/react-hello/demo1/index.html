@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+
+    <meta charset="utf-8">
+    <title>Hello World</title>
+  </head>
+  <body>
+    <div id="example"></div>
+    <div id="example1"></div>
+    <div id="example2"></div>
+    <script type="text/babel">
+
+      ReactDOM.render(
+        <h1>Hello,World!</h1>,
+        document.getElementById('example')
+      );
+      
+      var arr = ['nanxiaoqiang', '南肖墙', '呵呵'];
+
+      // 下边这句话会在控制台报Error：Warning: Each child in an array or iterator should have a unique "key" prop.
+      // 但是然并卵，页面还是正常输出的
+      // 这个babel的语法：｛后按照js，<后按照html
+      ReactDOM.render(
+        <div>
+        {
+          arr.map(function(name){
+            return <div>Hello {name}</div>
+          })
+        }
+        </div>,
+        document.getElementById('example1')
+      );
+
+      var arr1 = [
+        <h2>中文测试</h2>,
+        <h3>数组</h3>
+      ];
+
+      ReactDOM.render(
+        <div>{arr1}</div>,
+        document.getElementById('example2')
+      );
+    </script>
+  </body>
+</html>
