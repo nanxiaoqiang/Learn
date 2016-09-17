@@ -4,8 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import javax.annotation.Resource;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
@@ -14,16 +14,16 @@ import com.nanxiaoqiang.test.springboot.springboot_simple.domain.account.jdbc.Us
 
 @Service
 public class JdbcTemplateService {
-//	@Resource
-//	private JdbcTemplate jdbcTemplate;
-	
-	@Autowired
-	@Qualifier("primaryjdbcTemplate")
+	@Resource
 	private JdbcTemplate jdbcTemplate;
 	
-	@Autowired
-	@Qualifier("secondryjdbcTemplate")
-	private JdbcTemplate secondaryjdbcTemplate;
+//	@Autowired
+//	@Qualifier("primaryjdbcTemplate")
+//	private JdbcTemplate jdbcTemplate;
+	
+//	@Autowired
+//	@Qualifier("secondryjdbcTemplate")
+//	private JdbcTemplate secondaryjdbcTemplate;
 
 	public int saveUser(User user) {
 		int count = jdbcTemplate.update("INSERT INTO test_sb_user(name, remark) VALUES (?, ?)", user.getName(),
