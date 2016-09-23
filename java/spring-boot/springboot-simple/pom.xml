@@ -39,6 +39,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+					<groupId>org.springframework.boot</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- 更改默认的内嵌Tomcat改为Jetty -->
+		<dependency>
+			<artifactId>spring-boot-starter-jetty</artifactId>
+			<groupId>org.springframework.boot</groupId>
 		</dependency>
 
 		<!-- Velocity集成支持 引用此包会自动引用web包 -->
@@ -71,11 +83,18 @@
 		    <artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 		
+		<!-- 日志log4j2支持 -->
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
 
+		<!-- 自身健康监控，自身支持/env、/info、/metrics、/health -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		
 		<!-- 测试模块，包括JUnit、Hamcrest、Mockito -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
