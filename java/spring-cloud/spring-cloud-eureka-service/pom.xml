@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.nanxiaoqiang.test.springcloud</groupId>
-	<artifactId>spring-cloud-eureka-server</artifactId>
+	<artifactId>spring-cloud-eureka-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-cloud-eureka-server</name>
+	<name>spring-cloud-eureka-service</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -43,7 +43,7 @@
 		 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 
 		<dependency>
