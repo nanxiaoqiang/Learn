@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 public class JpaService {
 
 	public JpaService() {
-		// TODO Auto-generated constructor stub
 	}
 
 }
