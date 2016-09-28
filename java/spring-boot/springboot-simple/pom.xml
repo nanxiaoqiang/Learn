@@ -19,7 +19,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.0.RELEASE</version>
-		<relativePath/>
+		<relativePath />
 	</parent>
 
 	<dependencies>
@@ -46,7 +46,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- 更改默认的内嵌Tomcat改为Jetty -->
 		<dependency>
 			<artifactId>spring-boot-starter-jetty</artifactId>
@@ -70,48 +70,43 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		
+
 		<!-- spring-boot缓存支持 -->
-		<!-- <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-cache</artifactId>
-		</dependency> -->
-		
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-cache</artifactId> 
+			</dependency> -->
+
 		<!-- spring-boot Redis支持 -->
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-data-redis</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-		
+
 		<!-- 日志log4j2支持 -->
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-log4j2</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
 
 		<!-- 自身健康监控，自身支持/env、/info、/metrics、/health -->
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-actuator</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		
+
 		<!-- 测试模块，包括JUnit、Hamcrest、Mockito -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		<!--
-           devtools可以实现页面热部署（即页面修改后会立即生效，这个可以直接在application.properties文件中配置spring.thymeleaf.cache=false来实现），    
-           实现类文件热部署（类文件修改后不会立即生效），实现对属性文件的热部署。 
-           即devtools会监听classpath下的文件变动，并且会立即重启应用（发生在保存时机），注意：因为其采用的虚拟机机制，该项重启是很快的    
-        -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-        </dependency>
+
+		<!-- devtools可以实现页面热部署（即页面修改后会立即生效，这个可以直接在application.properties文件中配置spring.thymeleaf.cache=false来实现）， 
+			实现类文件热部署（类文件修改后不会立即生效），实现对属性文件的热部署。 即devtools会监听classpath下的文件变动，并且会立即重启应用（发生在保存时机），注意：因为其采用的虚拟机机制，该项重启是很快的 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 		<!-- MySQL连接，SpringBoot内嵌MySQL的connector支持，版本：5.1.39 -->
 		<dependency>
@@ -119,23 +114,25 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>19.0</version>
 		</dependency>
-		
+
+		<!-- 不知道为啥不加入下边的两个测试的话就会报错，下边是报错内容 -->
+		<!-- javax.validation.ValidationException: HV000183: Unable to load 'javax.el.ExpressionFactory' -->
 		<dependency>
-   <groupId>javax.el</groupId>
-   <artifactId>javax.el-api</artifactId>
-   <version>2.2.4</version>
-</dependency>
-<dependency>
-   <groupId>org.glassfish.web</groupId>
-   <artifactId>javax.el</artifactId>
-   <version>2.2.4</version>
-</dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>javax.el</artifactId>
+			<version>2.2.4</version>
+		</dependency>
 
 	</dependencies>
 

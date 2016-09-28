@@ -33,7 +33,7 @@ public class JpaTransactioalTest {
 	private JpaTestTableWithoutCacheDao dao;
 	
 	@Test
-	public void test2() {
+	public void test2() {// 测试会false
 		dao.save(new TestTable("name0", "sname0"));
 		dao.save(new TestTable("name1", "sname1"));
 		dao.save(new TestTable("name2", "sname2"));
@@ -44,11 +44,11 @@ public class JpaTransactioalTest {
 	
 	@Test
 	@Transactional
-	public void test3() {
+	public void test3() {// 会false
 		dao.save(new TestTable("name0", "sname0"));
 		dao.save(new TestTable("name1", "sname1"));
 		dao.save(new TestTable("name2", "sname2"));
-		dao.save(new TestTable("name3", "sname3xxxxx"));// 这行会报错
+		dao.save(new TestTable("name3", "sname3xxxxx"));// 这行会报错，但是加入了事务，所以数据库里没有数据
 		dao.save(new TestTable("name4", "sname4"));
 		dao.save(new TestTable("name5", "sname5"));
 	}
