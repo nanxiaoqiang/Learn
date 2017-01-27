@@ -6,9 +6,11 @@
 	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
 </head>
 <body>
-	<div ng-app="">
+	<div ng-app="" ng-init="name='南肖墙'">
+	<!-- ng-init为初始化内容 -->
 		<p>名字:<input type="text" name="name" ng-model="name"></p>
 		<h1>Hello {{name}}</h1>
+		<!-- {{}}是angular的表达式，里边可以写各种运算，如{{ 5 + 5 }} -->
 	</div>
 </body>
 </html>
