@@ -11,6 +11,8 @@
 		<p>名字:<input type="text" name="name" ng-model="name"></p>
 		<h1>Hello {{name}}</h1>
 		<!-- {{}}是angular的表达式，里边可以写各种运算，如{{ 5 + 5 }} -->
+		<h1>Hello <span ng-bind="name"></span></h1>
+		<!-- ng-bind类似{{}} -->
 	</div>
 </body>
 </html>

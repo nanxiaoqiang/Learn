@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>01 hello module</title>
+	<meta charset="utf-8">
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myController"> <!--  ng-init="city='hehe';address='wuwu'">-->
+		<p>city:<input type="text" name="city" ng-model="city"></p>
+		<p>address:<input type="text" name="address" ng-model="address"></p>
+		<p>{{ city + '|' + address}}</p>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+
+	app.controller('myController', function($scope){
+		$scope.city = 'beijing';
+		$scope.address = 'chaoyang';
+	});
+</script>
